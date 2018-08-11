@@ -1,5 +1,6 @@
 import React from 'react'
 import {Field, reduxForm} from 'redux-form'
+import Input from '../Input.js'
 import { connect } from 'react-redux';
 
 export class AdminScore extends React.Component {
@@ -13,7 +14,16 @@ export class AdminScore extends React.Component {
   render() {
     return (
       <form>
-            Hello
+                    <Field type="text"
+          component={Input}
+          name='teamName'
+          // validate={[required, nonEmpty]}
+           />
+
+        
+
+
+
       </form>
     );
   }

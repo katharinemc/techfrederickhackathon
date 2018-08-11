@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
-
+import './adminPage.css'
 import Header from './Header'
 import { AdminScore } from './AdminScore';
 
