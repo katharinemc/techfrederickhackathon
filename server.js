@@ -7,7 +7,7 @@ require('./routes/teams.js')(app);
 
 var knex = require('knex')({
     client: 'pg',
-    connection: process.env.PG_CONNECTION_STRING,
+    connection: process.env.PG_CONNECTION_STRING || "postgres://postgres:guest@db:5432",
     searchPath: ['knex', 'public'],
   });
 
