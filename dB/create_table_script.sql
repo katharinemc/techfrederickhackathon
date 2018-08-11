@@ -2,8 +2,8 @@
 
 -- DROP TABLESPACE pg_global;
 
-ALTER TABLESPACE pg_global
-  OWNER TO postgres;
+-- ALTER TABLESPACE pg_global
+  -- OWNER TO postgres;
   
  CREATE DATABASE will_is_bamf;
 
