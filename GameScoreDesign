@@ -1,0 +1,58 @@
+https://github.com/katharinemc/techfrederickhackathon
+Teams of 5 people
+dart board, soccer balls
+time:  2 rounds
+Play
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Tools Used on Macbook
+github account and invite
+https://github.com/katharinemc/techfrederickhackathon
+
+Game Spreadsheet from Daniel
+https://docs.google.com/spreadsheets/d/1k2ILrozRP-WM3IPuJ3ZFhU7E4NyEB2F7BpfwA3u5JII/edit#gid=0
+
+Game Design Document
+https://docs.google.com/document/d/1I8XQ53Y3o4X2DWPK_hE3sEmOng0F0IGdm1AdW-K6CDw/edit
+
+
+
+Installing psql on macbook.
+https://www.openscg.com/bigsql/postgresql/installers/
+
+font awesome
+docker
+$ docker run -d -p 80:80 --name webserver nginx
+
+
+
+
+how to sync with git command line
+git status
+git push origin master
+git remote -b
+git push origin master
+
+docker
+cd to the local repository root directory on the mac
+//techfrederick/techfrederick
+docker-compose create
+this will download the docker containers using the yaml file;
+
+docker-compose up
+this will create an internal network described by the yaml and launch the website.
+localhost:8181
+localhost:8080
