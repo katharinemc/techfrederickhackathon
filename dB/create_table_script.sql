@@ -4,6 +4,10 @@
 
 ALTER TABLESPACE pg_global
   OWNER TO postgres;
+  
+ CREATE DATABASE will_is_bamf;
+
+  
  CREATE TABLE teams (
     tname           varchar(40) UNIQUE NOT NULL,
     teamid          serial PRIMARY KEY
