@@ -9,9 +9,8 @@ ALTER TABLESPACE pg_global
     teamid          serial
 );
 
-CREATE TABLE games (
-    gamename        varchar(80),
-    gameid          serial
+CREATE TABLE games (gameid serial PRIMARY KEY,
+    gamename VARCHAR (40) UNIQUE NOT NULL
 );
 
 CREATE TABLE results (
