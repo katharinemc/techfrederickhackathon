@@ -1,15 +1,21 @@
-CREATE TABLE teams (
+-- Tablespace: pg_global
+
+-- DROP TABLESPACE pg_global;
+
+ALTER TABLESPACE pg_global
+  OWNER TO postgres;
+ CREATE TABLE teams (
     tname           varchar(80),
-    teamid          shortserial
+    teamid          serial
 );
 
 CREATE TABLE games (
     gamename        varchar(80),
-    gameid          shortserial
+    gameid          serial
 );
 
 CREATE TABLE results (
-    roundid          shortserial,
+    roundid          serial,
     rtimestamp       time,
     teamid           int,
     gamenameid       int
