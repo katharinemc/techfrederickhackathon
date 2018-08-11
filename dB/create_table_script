@@ -9,13 +9,13 @@ CREATE TABLE games (
 );
 
 CREATE TABLE results (
-    roundid          shortserial
-    rtimestamp       time
-    teamid           int
+    roundid          shortserial,
+    rtimestamp       time,
+    teamid           int,
     gamenameid       int
 );
 CREATE TABLE scores (
-    roundid       int
-    teamid        int
+    roundid       int,
+    teamid        int,
     score         int
 );
