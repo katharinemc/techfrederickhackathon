@@ -5,8 +5,8 @@
 ALTER TABLESPACE pg_global
   OWNER TO postgres;
  CREATE TABLE teams (
-    tname           varchar(80),
-    teamid          serial
+    tname           varchar(40) UNIQUE NOT NULL,
+    teamid          serial PRIMARY KEY
 );
 
 CREATE TABLE games (gameid serial PRIMARY KEY,
@@ -14,10 +14,10 @@ CREATE TABLE games (gameid serial PRIMARY KEY,
 );
 
 CREATE TABLE results (
-    roundid          serial,
+    roundid          serial PRIMARY KEY,
     rtimestamp       time,
-    teamid           int,
-    gamenameid       int
+    teamid           int NOT NULL,
+    gamenameid       int NOT NULL
 );
 CREATE TABLE scores (
     roundid       int,
