@@ -1,30 +1,32 @@
-var con = require('../server.js');
-
 module.exports = function(app){
 
 app.post('/teamsi', function (req, res) {
-  res.send('teams')
-  knex('teams').insert({tname: 'TBD'})
+  var knex = require('../server.js');
+  res.send('inserting teams')
+  knex('teams').insert({tname: req.body.tname})
 })
 
 app.post('/teamsd', function (req, res) {
-  res.send('teams')
+  var knex = require('../server.js');
+  res.send('deleting teams')
   knex('teams')
-.where('tname', 'TBD')
+.where('tname', req.body.tname)
 .del()
 })
 
 app.post('/teamsu', function (req, res) {
-  res.send('teams')
+  var knex = require('../server.js');
+  res.send('updating teams')
   knex('teams')
-.where('tname', 'TBD')
+.where('tname', req.body.tname)
 .update({
-  tname: 'TBD',
+  tname: req.body.tname,
 })
 })
 
 app.get('/teamss', function (req, res) {
-  res.send('teams')
+  var knex = require('../server.js');
+  res.send('selecting teams')
   knex.select('tname', 'teamid').from('teams')
 })
 

@@ -1,21 +1,22 @@
-var knex = require('../server.js');
-
 module.exports = function(app){
 
 app.post('/scoresi', function (req, res) {
-    res.send('scores')
+    var knex = require('../server.js');
+    res.send('inserting scores')
     knex('scores').insert({score: res.body.score})
   })
 
 app.post('/scoresd', function (req, res) {
-    res.send('scores')
+    var knex = require('../server.js');
+    res.send('deleting scores')
     knex('scores')
 .where('teamid', res.body.teamid)
 .del()
     })
 
 app.post('/scoresu', function (req, res) {
-    res.send('scores')
+    var knex = require('../server.js');
+    res.send('upading scores')
     knex('scores')
 .where('teamid', res.body.teamid)
 .update({
@@ -24,7 +25,8 @@ app.post('/scoresu', function (req, res) {
     })
 
 app.get('/scoress', function (req, res) {
-    res.send('scores')
+    var knex = require('../server.js');
+    res.send('selecting scores')
     knex.select('teamid', 'roundid', 'score').from('scores')
     })
 
