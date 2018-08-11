@@ -8,16 +8,6 @@ Play
 
 
 
-
-
-
-
-
-
-
-
-
-
 Tools Used on Macbook
 github account and invite
 https://github.com/katharinemc/techfrederickhackathon
@@ -54,5 +44,46 @@ this will download the docker containers using the yaml file;
 
 docker-compose up
 this will create an internal network described by the yaml and launch the website.
-localhost:8181
+localhost:8081
+- PGADMIN_DEFAULT_EMAIL=me@example.com
+  - PGADMIN_DEFAULT_PASSWORD=password
+    create db   username postgre, password is guest
+
+
 localhost:8080
+
+force push
+git push origin master
+git fetch
+git rebase -i
+$ git rebase -i origin/master
+git commit
+$ git commit -am "updating dbscript"
+//git push origin master
+git checkout -b branch
+
+
+git remote -v
+
+to merge the master with my branch
+git status
+git fetch
+git merge origin/master
+
+to push my branch to git
+git push origin branch
+
+
+
+to connect to the local docker service
+get what is running
+docker ps
+$ docker exec -it 7d9 bash
+
+
+to get to the postgre command line.
+root@7d932b5f86cc:/# psql -U"postgres"
+
+
+postgres from Brandon  - linux for problems
+https://docs.docker.com/install/linux/linux-postinstall/
