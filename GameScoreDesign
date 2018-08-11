@@ -1,0 +1,21 @@
+https://github.com/katharinemc/techfrederickhackathon
+Teams of 5 people
+dart board, soccer balls
+time:  2 rounds
+Play
+
+
+
+
+
+
+Tools Used on Macbook
+github account and invite
+https://github.com/katharinemc/techfrederickhackathon
+
+Installing psql on macbook.
+https://www.openscg.com/bigsql/postgresql/installers/
+
+font awesome
+docker
+$ docker run -d -p 80:80 --name webserver nginx

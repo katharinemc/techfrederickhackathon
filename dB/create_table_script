@@ -1,0 +1,21 @@
+CREATE TABLE teams (
+    tname           varchar(80),
+    teamid          uuid
+);
+
+CREATE TABLE games (
+    gamename        varchar(80),
+    gameid          uuid
+);
+
+CREATE TABLE results (
+    roundid          uuid
+    rtimestamp       time
+    teamid           uuid
+    gamenameid       uuid
+);
+CREATE TABLE scores (
+    roundid       uuid
+    teamid        uuid
+    score         int
+);
