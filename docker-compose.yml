@@ -1,0 +1,13 @@
+pgadmin:
+  image: dpage/pgadmin4
+  ports:
+    - "8081:80"
+  environment:
+    - PGADMIN_DEFAULT_EMAIL=me@example.com
+    - PGADMIN_DEFAULT_PASSWORD=password
+  links:
+    - db
+db:
+  image: postgres
+  environment:
+    - POSTGRES_PASSWORD=guest
