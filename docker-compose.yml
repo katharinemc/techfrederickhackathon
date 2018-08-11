@@ -8,9 +8,11 @@ pgadmin:
   links:
     - db
 db:
-  image: postgres
+  image: hackathon/db
   environment:
     - POSTGRES_PASSWORD=guest
+  volumes:
+    - ./dB:/docker-entrypoint-initdb.d
 node:
   image: "node:8"
   user: "node"
