@@ -11,3 +11,16 @@ db:
   image: postgres
   environment:
     - POSTGRES_PASSWORD=guest
+node:
+  image: "node:8"
+  user: "node"
+  working_dir: /home/node/app
+  environment:
+    - NODE_ENV=develop
+  volumes:
+    - ./:/home/node/app
+  ports:
+    - "8080:5000"
+  command: "node server.js"
+  links:
+    - db
