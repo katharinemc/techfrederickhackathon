@@ -1,0 +1,4 @@
+User stories:
+    Authenticated back-end, authenticated users can add scores
+    Public can view scores updating in real-time on responsive website
+    Team ranking can be calucalted across multiple games
