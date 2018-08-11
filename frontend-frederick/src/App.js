@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
-import Header from './adminPage/Header'
+import Leaderboard from './leaderboard/Leaderboard';
+import AdminPage from './adminPage/AdminPage';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-        <Header />
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+
+      <Router>
+      <div>    
+      <Route exact path="/" component={Leaderboard} />
+      <Route exact path="/supersecretpath/" component={AdminPage} />
       </div>
+    </Router>
+
+
     );
   }
 }
