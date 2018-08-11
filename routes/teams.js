@@ -4,29 +4,28 @@ module.exports = function(app){
 
 app.post('/teamsi', function (req, res) {
   res.send('teams')
-  knex('books').insert({title: 'Slaughterhouse Five'})
+  knex('teams').insert({tname: 'TBD'})
 })
 
 app.post('/teamsd', function (req, res) {
   res.send('teams')
-  knex('accounts')
-.where('activated', false)
+  knex('teams')
+.where('tname', 'TBD')
 .del()
 })
 
 app.post('/teamsu', function (req, res) {
   res.send('teams')
-  knex('books')
-.where('published_date', '<', 2000)
+  knex('teams')
+.where('tname', 'TBD')
 .update({
-  status: 'archived',
-  thisKeyIsSkipped: undefined
+  tname: 'TBD',
 })
 })
 
 app.get('/teamss', function (req, res) {
   res.send('teams')
-  knex.select('title', 'author', 'year').from('books')
+  knex.select('tname', 'teamid').from('teams')
 })
 
 }

@@ -4,29 +4,28 @@ module.exports = function(app){
 
 app.post('/gamesi', function (req, res) {
     res.send('games')
-    knex('books').insert({title: 'Slaughterhouse Five'})
+    knex('games').insert({gamename: res.body.gamename})
   })
 
 app.post('/gamesd', function (req, res) {
     res.send('games')
-    knex('accounts')
-.where('activated', false)
+    knex('games')
+.where('gamename', res.body.gamename)
 .del()
     })
 
 app.post('/gamesu', function (req, res) {
     res.send('games')
-    knex('books')
-.where('published_date', '<', 2000)
+    knex('games')
+.where('gamename', res.body.gamename)
 .update({
-  status: 'archived',
-  thisKeyIsSkipped: undefined
+  gamename: res.body.gamename
 })
     })
 
 app.get('/gamess', function (req, res) {
     res.send('games')
-    knex.select('title', 'author', 'year').from('books')
+    knex.select('gamename', 'gameid').from('games')
     })
 
 }
